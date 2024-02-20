@@ -18,6 +18,7 @@ export function App() {
     }
     console.log("deu")
     startListening();
+    console.log(transcript)
   };
 
   const stopAndReset = () => {
@@ -30,8 +31,8 @@ export function App() {
       <h2 className="text-3xl">Texto 1</h2>
       <p>Microfone: {listening ? 'ligado' : 'desligado'}</p>
       <span>{transcript}</span>
-      <button onClick={record} className="bg-blue-500 h-15 w-1/2 text-2xl ms-3">Gravar</button>
-      <button onClick={stopAndReset} className="bg-red-500 h-15 w-1/2 text-2xl ms-3">Parar de gravar</button>
+      <button onClick={startListening} className="bg-blue-500 h-15 w-1/2 text-2xl ms-3">Gravar</button>
+      <button onClick={stopListening} className="bg-red-500 h-15 w-1/2 text-2xl ms-3">Parar de gravar</button>
     </div>
   )
 }
